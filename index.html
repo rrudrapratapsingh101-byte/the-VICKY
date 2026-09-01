@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050816">
+<title>RUDRA PRATAP SINGH // VICKY</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loader"><div class="loader-box"><div class="loader-logo">RPS</div><p>RUDRA SYSTEM INITIALIZING...</p><div class="bar"><i></i></div><small>VICKY // FUTURE DEVELOPER</small></div></div>
+<div class="cursor-glow"></div>
+<header>
+  <a class="brand" href="#home"><b>RPS</b><span>// VICKY</span></a>
+  <button class="menu" onclick="toggleMenu()">☰</button>
+  <nav id="nav"><a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#lab">TECH LAB</a><a href="#projects">PROJECTS</a><a href="#creator">BIKKEE WARRIOR</a></nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="orb"></div>
+  <p class="eyebrow">SYSTEM ONLINE • BUILT BY RUDRA</p>
+  <h1>RUDRA <span>PRATAP</span><br>SINGH</h1>
+  <h2>VICKY — FUTURE DEVELOPER IN PROGRESS</h2>
+  <p class="lead">Learning. Building. Experimenting. Turning ideas into real projects.</p>
+  <div class="actions"><a class="btn primary" href="#lab">ENTER TECH LAB</a><a class="btn" href="#projects">EXPLORE PROJECTS</a></div>
+  <p class="signature">— RUDRA PRATAP SINGH // aka VICKY</p>
+  <div class="scroll">SCROLL TO EXPLORE ↓</div>
+</section>
+
+<section id="about" class="section">
+ <p class="eyebrow">01 // THE CREATOR</p><h2>Built by <span>Rudra</span>.</h2>
+ <div class="cards">
+  <article class="card"><b class="num">01</b><h3>CODER</h3><p>Learning HTML, CSS, JavaScript and Python by building real projects.</p></article>
+  <article class="card"><b class="num">02</b><h3>CREATOR</h3><p>Building a creator identity around technology, experiments and facts.</p></article>
+  <article class="card"><b class="num">03</b><h3>BUILDER</h3><p>This website is part of my journey from beginner to developer.</p></article>
+ </div>
+</section>
+
+<section id="lab" class="section">
+ <p class="eyebrow">02 // RUDRA'S TECH LAB</p><h2>Interactive <span>systems</span>.</h2>
+ <div class="tools">
+  <article class="card tool"><h3>⚡ ADVANCED CALCULATOR</h3><input id="calc" class="wide" placeholder="e.g. (25+5)*2-10/2"><div class="calc-buttons"><button onclick="calc('7')">7</button><button onclick="calc('8')">8</button><button onclick="calc('9')">9</button><button onclick="calc('/')">÷</button><button onclick="calc('4')">4</button><button onclick="calc('5')">5</button><button onclick="calc('6')">6</button><button onclick="calc('*')">×</button><button onclick="calc('1')">1</button><button onclick="calc('2')">2</button><button onclick="calc('3')">3</button><button onclick="calc('-')">−</button><button onclick="calc('0')">0</button><button onclick="calc('.')">.</button><button onclick="calc('(')">(</button><button onclick="calc(')')">)</button><button onclick="clearCalc()">C</button><button onclick="backCalc()">⌫</button><button onclick="calculate()">=</button><button onclick="calc('+')">+</button></div><div id="calcOut" class="result">Ready.</div></article>
+  <article class="card tool"><h3>🧠 VICKY AI CORE</h3><div id="chat" class="chat"><p>VICKY AI: System ready. Try <b>/help</b>.</p></div><div class="row"><input id="aiInput" placeholder="Ask Vicky..." onkeydown="if(event.key==='Enter')askAI()"><button class="btn primary" onclick="askAI()">SEND</button></div></article>
+  <article class="card tool"><h3>🧪 RANDOM TECH FACT</h3><p>Generate a new fact locally in your browser.</p><button class="btn primary" onclick="fact()">GENERATE FACT</button><div id="fact" class="result">Awaiting input...</div></article>
+  <article class="card tool"><h3>⌨️ TYPING CHALLENGE</h3><div id="phrase" class="phrase">RUDRA BUILDS THE FUTURE</div><input id="typing" class="wide" placeholder="Type the phrase..." oninput="typing()"><div id="typingOut" class="result">Ready?</div></article>
+  <article class="card tool"><h3>🔄 UNIT CONVERTER</h3><div class="row"><input id="unitVal" type="number" placeholder="Value"><select id="unitType"><option value="km">km → miles</option><option value="miles">miles → km</option><option value="c">°C → °F</option><option value="f">°F → °C</option></select></div><button class="btn primary" onclick="convert()">CONVERT</button><div id="unitOut" class="result">Result.</div></article>
+  <article class="card tool"><h3>⏱️ STOPWATCH</h3><div id="watch" class="timer">00:00.0</div><div class="row"><button class="btn primary" onclick="startWatch()">START</button><button class="btn" onclick="stopWatch()">STOP</button><button class="btn" onclick="resetWatch()">RESET</button></div></article>
+ </div>
+</section>
+
+<section class="section terminal-section">
+ <p class="eyebrow">03 // RUDRA TERMINAL</p><h2>Command <span>center</span>.</h2>
+ <div class="terminal"><div class="term-top"><span>● ● ●</span><b>rudra@vicky:~</b></div><div id="termOut" class="term-out"><p>RUDRA TERMINAL v1.0</p><p>Type <b>help</b> to see commands.</p></div><div class="term-input"><span>›</span><input id="termIn" autocomplete="off" placeholder="type a command..." onkeydown="terminalKey(event)"></div></div>
+</section>
+
+<section id="projects" class="section">
+ <p class="eyebrow">04 // PROJECT ARCHIVE</p><h2>Ideas becoming <span>reality</span>.</h2>
+ <div class="cards">
+  <article class="card project"><h3>🌐 FUTURE TECH HUB</h3><p>This website — a personal interactive tech lab.</p><label>LIVE PROJECT</label></article>
+  <article class="card project"><h3>🤖 ASKORA AI</h3><p>AI-style assistant project concept.</p><label>IN PROGRESS</label></article>
+  <article class="card project"><h3>🔐 CALCULATOR VAULT</h3><p>Future Flutter app concept with a calculator-style interface.</p><label>FUTURE PROJECT</label></article>
+ </div>
+</section>
+
+<section id="progress" class="section">
+ <p class="eyebrow">05 // LEARNING DASHBOARD</p><h2>Rudra's coding <span>progress</span>.</h2>
+ <div class="progress-grid">
+  <div class="card"><h3>HTML</h3><div class="progress"><i style="width:85%"></i></div><b>COMPLETED / PRACTICED</b></div>
+  <div class="card"><h3>CSS</h3><div class="progress"><i style="width:45%"></i></div><b>LEARNING</b></div>
+  <div class="card"><h3>JAVASCRIPT</h3><div class="progress"><i style="width:20%"></i></div><b>LEARNING</b></div>
+  <div class="card"><h3>PYTHON</h3><div class="progress"><i style="width:15%"></i></div><b>FUTURE / LEARNING</b></div>
+ </div>
+ <div class="milestones card"><h3>🏆 MILESTONES</h3><span>✓ HTML learning completed</span><span>✓ CSS journey started</span><span>✓ First personal website</span><span>✓ Interactive tools built</span><span>✓ Future developer mode: ON</span></div>
+</section>
+
+<section id="creator" class="creator section">
+ <p class="eyebrow">06 // CREATOR MODE</p><h2><span>BIKKEE WARRIOR</span></h2>
+ <p class="lead">Rudra's creator identity for technology, experiments, facts and future content.</p>
+ <div class="creator-box"><div class="creator-mark">BW</div><div><h3>BIKKEE WARRIOR</h3><p>Creator • Builder • Learner</p><button class="btn" onclick="showToast('YouTube link can be added later in script.js')">OPEN CHANNEL</button></div></div>
+</section>
+
+<section class="final section"><p class="eyebrow">SYSTEM MESSAGE</p><h2>LEARN. BUILD. <span>LEVEL UP.</span> 🚀</h2><p>"This website is not the final version. It is proof that I started."</p><strong>— Rudra Pratap Singh // Vicky</strong></section>
+</main>
+
+<div class="sound"><span id="soundLabel">SOUND: OFF</span><button onclick="toggleSound()">ON / OFF</button></div>
+<div id="toast"></div>
+<footer>© 2026 RUDRA PRATAP SINGH • VICKY • BIKKEE WARRIOR</footer>
+<script src="script.js"></script>
+</body>
+</html>
