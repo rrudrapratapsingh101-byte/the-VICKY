@@ -1,20 +1,20 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="w1kp10XnHH0muiUmVq9l5V4P1uO6Yxin9YCA2D7QO1E" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#050816">
+<meta name="google-site-verification" content="w1kp10XnHH0muiUmVq9l5V4P1uO6Yxin9YCA2D7QO1E">
 <title>RUDRA PRATAP SINGH // VICKY</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="loader"><div class="loader-box"><div class="loader-logo">RPS</div><p>RUDRA SYSTEM INITIALIZING...</p><div class="bar"><i></i></div><small>VICKY // FUTURE DEVELOPER</small></div></div>
+<div id="loader"><div class="loader-box"><div class="loader-logo">RPS</div><p>RUDRA SYSTEM INITIALIZING...</p><div class="bar"><i></i></div><small>VICKY // EXTREME MODE</small></div></div>
 <div class="cursor-glow"></div>
 <header>
   <a class="brand" href="#home"><b>RPS</b><span>// VICKY</span></a>
   <button class="menu" onclick="toggleMenu()">☰</button>
-  <nav id="nav"><a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#lab">TECH LAB</a><a href="#projects">PROJECTS</a><a href="#creator">BIKKEE WARRIOR</a></nav>
+  <nav id="nav" class="nav" aria-label="Main navigation"><a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#lab">TECH LAB</a><a href="#games">GAME ZONE</a><a href="#secret">SECRET</a><a href="#tutorials">TUTORIALS</a><a href="#projects">PROJECTS</a><a href="#creator">BIKKEE WARRIOR</a></nav>
 </header>
 
 <main>
@@ -22,7 +22,7 @@
   <div class="orb"></div>
   <p class="eyebrow">SYSTEM ONLINE • BUILT BY RUDRA</p>
   <h1>RUDRA <span>PRATAP</span><br>SINGH</h1>
-  <h2>VICKY — FUTURE DEVELOPER IN PROGRESS</h2>
+  <h2>VICKY — ENTER THE EXTREME</h2>
   <p class="lead">Learning. Building. Experimenting. Turning ideas into real projects.</p>
   <div class="actions"><a class="btn primary" href="#lab">ENTER TECH LAB</a><a class="btn" href="#projects">EXPLORE PROJECTS</a></div>
   <p class="signature">— RUDRA PRATAP SINGH // aka VICKY</p>
@@ -55,8 +55,46 @@
  <div class="terminal"><div class="term-top"><span>● ● ●</span><b>rudra@vicky:~</b></div><div id="termOut" class="term-out"><p>RUDRA TERMINAL v1.0</p><p>Type <b>help</b> to see commands.</p></div><div class="term-input"><span>›</span><input id="termIn" autocomplete="off" placeholder="type a command..." onkeydown="terminalKey(event)"></div></div>
 </section>
 
+<section id="secret" class="section secret-section">
+ <p class="eyebrow">09 // CLASSIFIED ACCESS</p><h2>VICKY <span>SECRET LAB</span>.</h2>
+ <p class="lead">Three hidden access codes. Three different unlocks. Discover the full system.</p>
+ <div class="secret-console card">
+  <div class="secret-lock">🔐</div>
+  <div class="secret-copy"><h3>SECRET ACCESS TERMINAL</h3><p>Enter an access code to unlock a hidden feature.</p></div>
+  <div class="secret-input-row"><input id="secretCode" maxlength="12" autocomplete="off" spellcheck="false" placeholder="ENTER ACCESS CODE"><button class="btn primary" onclick="unlockSecret()">UNLOCK</button></div>
+  <div id="secretStatus" class="result">SYSTEM LOCKED • 0 / 3 UNLOCKED</div>
+  <div class="secret-unlocks" id="secretUnlocks">
+   <div class="secret-chip" data-secret="VICKY1"><span>01</span><b>UNKNOWN MODULE</b><small>LOCKED</small></div>
+   <div class="secret-chip" data-secret="VICKY2"><span>02</span><b>UNKNOWN MODULE</b><small>LOCKED</small></div>
+   <div class="secret-chip" data-secret="VICKY3"><span>03</span><b>FINAL MODULE</b><small>LOCKED</small></div>
+  </div>
+ </div>
+ <div id="ultimateSecret" class="ultimate-secret card" hidden></div>
+</section>
+
+<section id="games" class="section games-section">
+ <p class="eyebrow">04 // RUDRA GAME ZONE</p><h2>Three games. <span>Maximum chaos.</span></h2>
+ <p class="lead">Mobile-first arcade games with colourful visuals, responsive controls and punchy sound effects.</p>
+ <div class="game-grid game-grid-2">
+  <article class="card game-card mega-game-card"><div class="game-icon">🏎️</div><h3>NEON TRAFFIC RUSH</h3><p>Drive through a glowing highway, dodge traffic, survive longer and push your speed higher.</p><div class="game-meta"><span>DRIVE</span><span>DODGE</span><span>HIGH SCORE</span></div><button class="btn primary" onclick="openGame('car')">PLAY NOW →</button></article>
+  <article class="card game-card mega-game-card"><div class="game-icon">🎯</div><h3>NEON BLASTER</h3><p>Arcade target shooter with colourful enemies, combos, boss waves and a 60-second score chase.</p><div class="game-meta"><span>ARCADE</span><span>COMBO</span><span>BOSS WAVE</span></div><button class="btn primary" onclick="openGame('blaster')">PLAY NOW →</button></article>
+  <article class="card game-card mega-game-card"><div class="game-icon">🍾</div><h3>NEON BOTTLE BREAKER</h3><p>Face a row of colourful bottles and smash them with arcade shots before they disappear.</p><div class="game-meta"><span>BOTTLE RANGE</span><span>ACCURACY</span><span>HIGH SCORE</span></div><button class="btn primary" onclick="openGame('bottles')">PLAY NOW →</button></article>
+ </div>
+ <div class="card game-scorebar"><span>🏆 BEST SCORES</span><b id="bestCar">DRIVE: 0</b><b id="bestBlaster">BLASTER: 0</b><b id="bestBottles">BOTTLES: 0</b></div>
+</section>
+
+<section id="tutorials" class="section tutorials">
+ <p class="eyebrow">05 // VICKY ACADEMY</p><h2>Learn. <span>Build.</span> Repeat.</h2>
+ <p class="lead">Quick tutorials and the creator channel — connected in one place.</p>
+ <div class="cards">
+  <article class="card"><h3>🌐 WEB DEV</h3><p>HTML → CSS → JavaScript. Learn by building real mini-projects.</p><a class="btn" href="#progress">VIEW ROADMAP →</a></article>
+  <article class="card"><h3>🎬 CREATOR LAB</h3><p>Technology facts, experiments, shorts and project videos from Bikkee Warrior.</p><a class="btn" href="https://www.youtube.com/@bikkeedada" target="_blank" rel="noopener">WATCH CHANNEL →</a></article>
+  <article class="card"><h3>⚡ 1-MINUTE MISSIONS</h3><p>Open the Game Zone, play one quick round, beat your score and go again.</p><a class="btn" href="#games">ENTER GAME ZONE →</a></article>
+ </div>
+</section>
+
 <section id="projects" class="section">
- <p class="eyebrow">04 // PROJECT ARCHIVE</p><h2>Ideas becoming <span>reality</span>.</h2>
+ <p class="eyebrow">06 // PROJECT ARCHIVE</p><h2>Ideas becoming <span>reality</span>.</h2>
  <div class="cards">
   <article class="card project"><h3>🌐 FUTURE TECH HUB</h3><p>This website — a personal interactive tech lab.</p><label>LIVE PROJECT</label></article>
   <article class="card project"><h3>🤖 ASKORA AI</h3><p>AI-style assistant project concept.</p><label>IN PROGRESS</label></article>
@@ -65,7 +103,7 @@
 </section>
 
 <section id="progress" class="section">
- <p class="eyebrow">05 // LEARNING DASHBOARD</p><h2>Rudra's coding <span>progress</span>.</h2>
+ <p class="eyebrow">07 // LEARNING DASHBOARD</p><h2>Rudra's coding <span>progress</span>.</h2>
  <div class="progress-grid">
   <div class="card"><h3>HTML</h3><div class="progress"><i style="width:85%"></i></div><b>COMPLETED / PRACTICED</b></div>
   <div class="card"><h3>CSS</h3><div class="progress"><i style="width:45%"></i></div><b>LEARNING</b></div>
@@ -76,9 +114,9 @@
 </section>
 
 <section id="creator" class="creator section">
- <p class="eyebrow">06 // CREATOR MODE</p><h2><span>BIKKEE WARRIOR</span></h2>
+ <p class="eyebrow">08 // CREATOR MODE</p><h2><span>BIKKEE WARRIOR</span></h2>
  <p class="lead">Rudra's creator identity for technology, experiments, facts and future content.</p>
- <div class="creator-box"><div class="creator-mark">BW</div><div><h3>BIKKEE WARRIOR</h3><p>Creator • Builder • Learner</p><button class="btn" onclick="showToast('YouTube link can be added later in script.js')">OPEN CHANNEL</button></div></div>
+ <div class="creator-box"><div class="creator-mark">BW</div><div><h3>BIKKEE WARRIOR</h3><p>Creator • Builder • Learner</p><a class="btn" href="https://www.youtube.com/@bikkeedada" target="_blank" rel="noopener">OPEN CHANNEL</a></div></div>
 </section>
 
 <section class="final section"><p class="eyebrow">SYSTEM MESSAGE</p><h2>LEARN. BUILD. <span>LEVEL UP.</span> 🚀</h2><p>"This website is not the final version. It is proof that I started."</p><strong>— Rudra Pratap Singh // Vicky</strong></section>
@@ -86,6 +124,7 @@
 
 <div class="sound"><span id="soundLabel">SOUND: OFF</span><button onclick="toggleSound()">ON / OFF</button></div>
 <div id="toast"></div>
+<div id="gameModal" class="game-modal" aria-hidden="true"><div class="game-window"><button class="game-close" onclick="closeGame()">×</button><div id="gameMount"></div></div></div>
 <footer>© 2026 RUDRA PRATAP SINGH • VICKY • BIKKEE WARRIOR</footer>
 <script src="script.js"></script>
 </body>
