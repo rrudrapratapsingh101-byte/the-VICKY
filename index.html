@@ -57,30 +57,53 @@
 
 <section id="secret" class="section secret-section">
  <p class="eyebrow">09 // CLASSIFIED ACCESS</p><h2>VICKY <span>SECRET LAB</span>.</h2>
- <p class="lead">Three hidden access codes. Three different unlocks. Discover the full system.</p>
+ <p class="lead">Enter the classified access code to open a hidden page.</p>
  <div class="secret-console card">
   <div class="secret-lock">🔐</div>
-  <div class="secret-copy"><h3>SECRET ACCESS TERMINAL</h3><p>Enter an access code to unlock a hidden feature.</p></div>
-  <div class="secret-input-row"><input id="secretCode" maxlength="12" autocomplete="off" spellcheck="false" placeholder="ENTER ACCESS CODE"><button class="btn primary" onclick="unlockSecret()">UNLOCK</button></div>
-  <div id="secretStatus" class="result">SYSTEM LOCKED • 0 / 3 UNLOCKED</div>
-  <div class="secret-unlocks" id="secretUnlocks">
-   <div class="secret-chip" data-secret="VICKY1"><span>01</span><b>UNKNOWN MODULE</b><small>LOCKED</small></div>
-   <div class="secret-chip" data-secret="VICKY2"><span>02</span><b>UNKNOWN MODULE</b><small>LOCKED</small></div>
-   <div class="secret-chip" data-secret="VICKY3"><span>03</span><b>FINAL MODULE</b><small>LOCKED</small></div>
+  <div class="secret-copy"><h3>SECRET ACCESS TERMINAL</h3><p>Enter the classified access code.</p></div>
+  <div class="secret-input-row"><input id="secretCode" maxlength="20" autocomplete="off" spellcheck="false" placeholder="ENTER ACCESS CODE"><button class="btn primary" onclick="unlockSecret()">UNLOCK</button></div>
+  <div id="secretStatus" class="result">SYSTEM LOCKED</div>
+ </div>
+ <div id="secretAchievements" class="secret-achievements">
+  <div class="secret-chip" data-ach="code"><span>ACHIEVEMENT 01</span><b>CODE BREAKER</b><small>LOCKED</small></div>
+  <div class="secret-chip" data-ach="rainbow"><span>ACHIEVEMENT 02</span><b>RAINBOW MODE</b><small>LOCKED</small></div>
+  <div class="secret-chip" data-ach="easter"><span>ACHIEVEMENT 03</span><b>EASTER EYE</b><small>LOCKED</small></div>
+  <div class="secret-chip" data-ach="crew"><span>ACHIEVEMENT 04</span><b>CLASSIFIED CREW</b><small>LOCKED</small></div>
+</div>
+<div id="ultimateSecret" class="ultimate-secret card" hidden></div>
+ <div id="classifiedPage" class="classified-page" hidden aria-hidden="true">
+  <button class="classified-exit" type="button" onclick="closeClassifiedPage()">EXIT ✕</button>
+  <div class="classified-inner">
+   <p class="eyebrow">CLASSIFIED // PRIVATE FILE</p>
+   <h3>THE CREW</h3>
+   <div class="classified-names">
+    <div>Daddu</div>
+    <div>Prempal Jijju</div>
+    <div>8 Kanjar</div>
+    <div>NK Yadav</div>
+    <div>Kaushl Didi</div>
+   </div>
   </div>
  </div>
- <div id="ultimateSecret" class="ultimate-secret card" hidden></div>
 </section>
 
 <section id="games" class="section games-section">
- <p class="eyebrow">04 // RUDRA GAME ZONE</p><h2>Three games. <span>Maximum chaos.</span></h2>
- <p class="lead">Mobile-first arcade games with colourful visuals, responsive controls and punchy sound effects.</p>
+ <p class="eyebrow">04 // RUDRA GAME ZONE</p><h2>Nine games. <span>Maximum chaos.</span></h2>
+ <p class="lead">Mobile-first arcade games with responsive controls, high scores, combos and secret unlocks.</p><div class="game-filters" role="group" aria-label="Game filters"><button class="filter-btn active" onclick="filterGames('all')">ALL</button><button class="filter-btn" onclick="filterGames('arcade')">ARCADE</button><button class="filter-btn" onclick="filterGames('puzzle')">PUZZLE</button><button class="filter-btn" onclick="filterGames('action')">ACTION</button></div>
  <div class="game-grid game-grid-2">
-  <article class="card game-card mega-game-card"><div class="game-icon">🏎️</div><h3>NEON TRAFFIC RUSH</h3><p>Drive through a glowing highway, dodge traffic, survive longer and push your speed higher.</p><div class="game-meta"><span>DRIVE</span><span>DODGE</span><span>HIGH SCORE</span></div><button class="btn primary" onclick="openGame('car')">PLAY NOW →</button></article>
-  <article class="card game-card mega-game-card"><div class="game-icon">🎯</div><h3>NEON BLASTER</h3><p>Arcade target shooter with colourful enemies, combos, boss waves and a 60-second score chase.</p><div class="game-meta"><span>ARCADE</span><span>COMBO</span><span>BOSS WAVE</span></div><button class="btn primary" onclick="openGame('blaster')">PLAY NOW →</button></article>
-  <article class="card game-card mega-game-card"><div class="game-icon">🍾</div><h3>NEON BOTTLE BREAKER</h3><p>Face a row of colourful bottles and smash them with arcade shots before they disappear.</p><div class="game-meta"><span>BOTTLE RANGE</span><span>ACCURACY</span><span>HIGH SCORE</span></div><button class="btn primary" onclick="openGame('bottles')">PLAY NOW →</button></article>
+  <article data-game-type="arcade" class="card game-card mega-game-card"><div class="game-icon">🏎️</div><h3>TRAFFIC RUSH</h3><p>Drive through a glowing highway, dodge traffic, survive longer and push your speed higher.</p><div class="game-meta"><span>DRIVE</span><span>DODGE</span><span>HIGH SCORE</span></div><button class="btn primary" onclick="openGame('car')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card"><div class="game-icon">🎯</div><h3>TARGET BLASTER</h3><p>Arcade target shooter with colourful enemies, combos, boss waves and a 60-second score chase.</p><div class="game-meta"><span>ARCADE</span><span>COMBO</span><span>BOSS WAVE</span></div><button class="btn primary" onclick="openGame('blaster')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card"><div class="game-icon">🍾</div><h3>BOTTLE BREAKER</h3><p>Face a row of colourful bottles and smash them with arcade shots before they disappear.</p><div class="game-meta"><span>BOTTLE RANGE</span><span>ACCURACY</span><span>HIGH SCORE</span></div><button class="btn primary" onclick="openGame('bottles')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card"><div class="game-icon">🍄</div><h3>VICKY SUPER RUN</h3><p>A classic side-scrolling platform adventure: run, jump, collect coins and reach the portal.</p><div class="game-meta"><span>PLATFORMER</span><span>COINS</span><span>LEVELS</span></div><button class="btn primary" onclick="openGame('platformer')">PLAY NOW →</button></article>
+  <article data-game-type="puzzle" class="card game-card mega-game-card"><div class="game-icon">🫧</div><h3>BUBBLE SHOOTER</h3><p>Match colourful bubbles, build combos and clear the board before the danger meter fills.</p><div class="game-meta"><span>MATCH 3</span><span>COMBOS</span><span>LEVELS</span></div><button class="btn primary" onclick="openGame('bubble')">PLAY NOW →</button></article>
+  <article data-game-type="puzzle" class="card game-card mega-game-card"><div class="game-icon">🌪️</div><h3>BUBBLE STORM</h3><p>A faster bubble-shooter challenge: pop colour clusters, beat the clock and survive the storm.</p><div class="game-meta"><span>TIME ATTACK</span><span>MATCH 3</span><span>COMBO RUSH</span></div><button class="btn primary" onclick="openGame('bubbleRush')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card"><div class="game-icon">🚀</div><h3>SPACE DODGE</h3><p>Fly through a colourful asteroid field, dodge hazards and survive as long as you can.</p><div class="game-meta"><span>SPACE</span><span>DODGE</span><span>HIGH SCORE</span></div><button class="btn primary" onclick="openGame('space')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card"><div class="game-icon">🏃</div><h3>ROOFTOP RUN</h3><p>Run across futuristic rooftops, jump gaps, collect coins and chase your best distance.</p><div class="game-meta"><span>RUN</span><span>JUMP</span><span>ENDLESS</span></div><button class="btn primary" onclick="openGame('rooftop')">PLAY NOW →</button></article>
+  <article data-game-type="arcade" class="card game-card mega-game-card rainbow-card"><div class="game-icon">🌈</div><h3>COLOR CATCH</h3><p>Catch the target only when its colour matches the command. Speed rises every round.</p><div class="game-meta"><span>REACTION</span><span>COLOUR</span><span>COMBO</span></div><button class="btn primary" onclick="openGame('colorCatch')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card rainbow-card"><div class="game-icon">⚡</div><h3>LASER LANE</h3><p>Switch lanes and dodge incoming laser gates. Survive the colourful speed-up.</p><div class="game-meta"><span>DODGE</span><span>LANES</span><span>SPEED</span></div><button class="btn primary" onclick="openGame('laserLane')">PLAY NOW →</button></article>
+  <article data-game-type="puzzle" class="card game-card mega-game-card rainbow-card"><div class="game-icon">🧩</div><h3>PIXEL FLIP</h3><p>Flip tiles and find matching pairs before the move counter reaches zero.</p><div class="game-meta"><span>MEMORY</span><span>PUZZLE</span><span>PAIRS</span></div><button class="btn primary" onclick="openGame('pixelFlip')">PLAY NOW →</button></article>
  </div>
- <div class="card game-scorebar"><span>🏆 BEST SCORES</span><b id="bestCar">DRIVE: 0</b><b id="bestBlaster">BLASTER: 0</b><b id="bestBottles">BOTTLES: 0</b></div>
+ <div class="card game-scorebar"><span>🏆 BEST SCORES</span><b id="bestCar">DRIVE: 0</b><b id="bestBlaster">BLASTER: 0</b><b id="bestBottles">BOTTLES: 0</b><b id="bestPlatformer">RUN: 0</b><b id="bestBubble">BUBBLES: 0</b><b id="bestBubbleRush">STORM: 0</b></div>
 </section>
 
 <section id="tutorials" class="section tutorials">
@@ -102,13 +125,13 @@
  </div>
 </section>
 
-<section id="progress" class="section">
- <p class="eyebrow">07 // LEARNING DASHBOARD</p><h2>Rudra's coding <span>progress</span>.</h2>
- <div class="progress-grid">
-  <div class="card"><h3>HTML</h3><div class="progress"><i style="width:85%"></i></div><b>COMPLETED / PRACTICED</b></div>
-  <div class="card"><h3>CSS</h3><div class="progress"><i style="width:45%"></i></div><b>LEARNING</b></div>
-  <div class="card"><h3>JAVASCRIPT</h3><div class="progress"><i style="width:20%"></i></div><b>LEARNING</b></div>
-  <div class="card"><h3>PYTHON</h3><div class="progress"><i style="width:15%"></i></div><b>FUTURE / LEARNING</b></div>
+<section id="progress" class="section dangerous-level-section">
+ <p class="eyebrow">07 // DANGEROUS LEVEL</p><h2>DANGEROUS <span>LEVEL</span>.</h2><p class="danger-subtitle">⚡ CODE HARD. BUILD LOUD. LEVEL UP. ⚡</p>
+ <div class="progress-grid dangerous-grid">
+  <div class="card danger-card"><h3>HTML</h3><div class="progress"><i style="width:85%"></i></div><b>COMPLETED / PRACTICED</b></div>
+  <div class="card danger-card"><h3>CSS</h3><div class="progress"><i style="width:45%"></i></div><b>LEARNING</b></div>
+  <div class="card danger-card"><h3>JAVASCRIPT</h3><div class="progress"><i style="width:20%"></i></div><b>LEARNING</b></div>
+  <div class="card danger-card"><h3>PYTHON</h3><div class="progress"><i style="width:15%"></i></div><b>FUTURE / LEARNING</b></div>
  </div>
  <div class="milestones card"><h3>🏆 MILESTONES</h3><span>✓ HTML learning completed</span><span>✓ CSS journey started</span><span>✓ First personal website</span><span>✓ Interactive tools built</span><span>✓ Future developer mode: ON</span></div>
 </section>

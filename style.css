@@ -24,3 +24,93 @@ header{position:sticky;top:0;z-index:20;padding:17px 6%;display:flex;justify-con
 /* ===== VICKY SECRET LAB ===== */
 .secret-section{position:relative}.secret-console{max-width:900px;margin:auto;text-align:center;border-color:#55e7ff44;background:linear-gradient(135deg,#071329dd,#090b1ddd)}.secret-lock{font-size:3rem;margin-bottom:8px;text-shadow:0 0 30px #55e7ff}.secret-copy h3{font:700 20px Orbitron;margin:8px 0}.secret-copy p{color:#91a1bd}.secret-input-row{display:flex;gap:10px;max-width:620px;margin:22px auto}.secret-input-row input{text-align:center;font:700 15px Orbitron;letter-spacing:3px}.secret-unlocks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.secret-chip{padding:16px;border:1px solid #263957;border-radius:12px;background:#050b18;display:flex;flex-direction:column;gap:5px;transition:.3s}.secret-chip span{font:700 11px Orbitron;color:#617391}.secret-chip b{font:700 13px Orbitron}.secret-chip small{color:#657696;font-size:10px;letter-spacing:2px}.secret-chip.unlocked{border-color:#55e7ff88;box-shadow:0 0 24px #55e7ff16;background:#07172a}.secret-chip.unlocked small{color:#55e7ff}.ultimate-secret{max-width:900px;margin:24px auto;text-align:center;border-color:#55e7ff88;background:radial-gradient(circle at center,#102d4c,#060a18 70%);box-shadow:0 0 50px #55e7ff18}.ultimate-icon{font-size:3.5rem;text-shadow:0 0 35px #55e7ff}.ultimate-secret h3{font:700 25px Orbitron;color:#55e7ff}.ultimate-secret p{color:#9fb0c8}.ultimate-line{font:700 12px Orbitron;letter-spacing:2px;color:#d9f8ff;margin-top:18px}.secret-unlocked-1 body{}.secret-unlocked-1 .hero h1{text-shadow:0 0 35px #55e7ff}.secret-unlocked-2 .secret-section{background:radial-gradient(circle at 50% 45%,#0b2340aa,transparent 55%)}.secret-unlocked-3:after{animation-duration:5s}.secret-progress .brand b{text-shadow:0 0 14px #55e7ff}.secret{animation:secret .35s infinite alternate}
 @media(max-width:800px){.secret-input-row{flex-direction:column}.secret-input-row .btn{width:100%}.secret-unlocks{grid-template-columns:1fr}.secret-chip{padding:14px}.secret-console{padding:22px}}
+
+/* VICKY 2.1 secret memory game */
+.memory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:390px;margin:18px auto}.memory-cell{aspect-ratio:1;border:1px solid rgba(130,220,255,.25);background:#0a1525;border-radius:14px;cursor:pointer;transition:.12s}.memory-cell.active{background:#55e7ff;box-shadow:0 0 30px rgba(85,231,255,.7);transform:scale(.96)}.memory-cell.selected{outline:3px solid #fff;box-shadow:0 0 20px rgba(255,255,255,.3)}.secret-game-btn{margin-top:18px}.secret-unlocked-1 .game-card{animation:overdrivePulse 1.8s ease-in-out infinite alternate}.secret-unlocked-2 .arcade-canvas-wrap:after{content:"SYSTEM VISION ONLINE";position:absolute;top:10px;right:12px;font:700 10px Orbitron;color:#55e7ff;letter-spacing:1px;text-shadow:0 0 12px #55e7ff;pointer-events:none}.arcade-canvas-wrap{position:relative}@keyframes overdrivePulse{from{box-shadow:0 0 12px rgba(85,231,255,.08)}to{box-shadow:0 0 30px rgba(85,231,255,.25)}}
+
+/* ===== CLASSIFIED SECRET PAGE ===== */
+.classified-page{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;background:radial-gradient(circle at 50% 20%,#17233b 0,transparent 38%),linear-gradient(135deg,#02040a,#070b15 55%,#020308);overflow:auto;padding:30px}
+.classified-page[hidden]{display:none}
+.classified-page:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.2;background-image:linear-gradient(#24395b 1px,transparent 1px),linear-gradient(90deg,#24395b 1px,transparent 1px);background-size:42px 42px}
+.classified-exit{position:absolute;right:24px;top:20px;z-index:2;padding:10px 15px;border:1px solid #55e7ff55;border-radius:9px;background:#081126;color:#dff8ff;font:700 12px Orbitron;cursor:pointer;letter-spacing:1px}
+.classified-exit:hover{border-color:#55e7ff;box-shadow:0 0 20px #55e7ff22}
+.classified-inner{position:relative;width:min(760px,100%);padding:48px 34px;text-align:center;border:1px solid #55e7ff44;border-radius:20px;background:#071020e8;box-shadow:0 0 70px #55e7ff12}
+.classified-inner h3{font:900 clamp(34px,7vw,70px) Orbitron;margin:8px 0 34px;color:#55e7ff;text-shadow:0 0 25px #55e7ff33}
+.classified-names{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.classified-names div{padding:18px;border:1px solid #263957;border-radius:12px;background:#050b18;color:#eef5ff;font:700 17px Orbitron;letter-spacing:1px}
+.classified-names div:last-child{grid-column:1/-1}
+body.classified-open{overflow:hidden}
+@media(max-width:600px){.classified-page{padding:18px}.classified-inner{padding:38px 18px}.classified-names{grid-template-columns:1fr}.classified-names div:last-child{grid-column:auto}.classified-exit{right:14px;top:14px}}
+
+
+/* Game filters / Dangerous Level polish */
+.game-filters{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 24px}
+.filter-btn{border:1px solid rgba(80,170,255,.28);background:rgba(8,15,28,.72);color:#b9d9ff;padding:9px 14px;border-radius:999px;font-weight:800;letter-spacing:.08em;cursor:pointer;transition:.2s}
+.filter-btn:hover,.filter-btn.active{border-color:#58b5ff;box-shadow:0 0 18px rgba(65,160,255,.22);transform:translateY(-1px)}
+.game-card.is-hidden{display:none}
+@media(max-width:600px){.game-filters{gap:7px}.filter-btn{padding:8px 11px;font-size:12px}}
+
+/* ===== DANGEROUS LEVEL — COLOUR OVERDRIVE ===== */
+.dangerous-level-section{position:relative;isolation:isolate;overflow:hidden;border-top:1px solid rgba(255,77,141,.18);border-bottom:1px solid rgba(85,231,255,.18);background:radial-gradient(circle at 10% 15%,rgba(255,77,141,.16),transparent 28%),radial-gradient(circle at 88% 20%,rgba(168,107,255,.18),transparent 30%),radial-gradient(circle at 50% 90%,rgba(72,245,167,.12),transparent 32%),linear-gradient(135deg,#080b1d,#10113a 48%,#07182a);}
+.dangerous-level-section:before{content:"";position:absolute;inset:-30%;z-index:-1;background:conic-gradient(from 0deg,rgba(85,231,255,.10),rgba(255,77,141,.12),rgba(255,209,102,.10),rgba(72,245,167,.10),rgba(168,107,255,.12),rgba(85,231,255,.10));filter:blur(55px);animation:dangerSpin 16s linear infinite;}
+.dangerous-level-section>h2{background:linear-gradient(90deg,#55e7ff,#ff4d8d,#ffd166,#48f5a7,#a86bff,#55e7ff);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:dangerGradient 7s linear infinite;text-shadow:none;}
+.dangerous-level-section>h2 span{color:inherit;}
+.danger-subtitle{text-align:center;font:800 12px Orbitron;letter-spacing:3px;color:#dff8ff;margin:-22px auto 34px;text-shadow:0 0 14px rgba(85,231,255,.35);}
+.dangerous-grid .danger-card{position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(9,18,43,.94),rgba(8,10,30,.88));transition:.3s;}
+.dangerous-grid .danger-card:before{content:"";position:absolute;inset:0;opacity:.18;background:linear-gradient(135deg,transparent 25%,currentColor 100%);pointer-events:none;}
+.dangerous-grid .danger-card:nth-child(1){color:#55e7ff;border-color:rgba(85,231,255,.45)}
+.dangerous-grid .danger-card:nth-child(2){color:#ff4d8d;border-color:rgba(255,77,141,.45)}
+.dangerous-grid .danger-card:nth-child(3){color:#ffd166;border-color:rgba(255,209,102,.45)}
+.dangerous-grid .danger-card:nth-child(4){color:#48f5a7;border-color:rgba(72,245,167,.45)}
+.dangerous-grid .danger-card h3{color:inherit;text-shadow:0 0 15px currentColor}
+.dangerous-grid .danger-card .progress{background:rgba(255,255,255,.08)}
+.dangerous-grid .danger-card .progress i{background:linear-gradient(90deg,currentColor,#fff);box-shadow:0 0 14px currentColor;}
+.dangerous-grid .danger-card b{color:inherit}
+.dangerous-grid .danger-card:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 20px 60px rgba(0,0,0,.45),0 0 30px color-mix(in srgb,currentColor 25%,transparent);}
+@keyframes dangerGradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes dangerSpin{to{transform:rotate(360deg)}}
+
+/* ===== GAME RELIABILITY POLISH ===== */
+.game-modal{overscroll-behavior:contain;}
+.game-window{touch-action:pan-y;}
+.arcade-canvas{touch-action:none;cursor:crosshair;}
+.arcade-control,.btn,.filter-btn{user-select:none;-webkit-tap-highlight-color:transparent;}
+@media(max-width:600px){.dangerous-level-section{padding-left:16px;padding-right:16px}.danger-subtitle{font-size:10px;letter-spacing:1.8px}.dangerous-grid{gap:14px}.dangerous-grid .danger-card{padding:22px}.arcade-canvas{max-height:52vh}.arcade-shell{border-radius:14px}.arcade-head{padding:10px}.arcade-stat{font-size:.68rem}}
+
+/* ===== DANGEROUS LEVEL 4.0 — RAINBOW MOTION ===== */
+.dangerous-level-section{background:radial-gradient(circle at 12% 18%,rgba(85,231,255,.20),transparent 25%),radial-gradient(circle at 88% 18%,rgba(255,77,141,.20),transparent 26%),radial-gradient(circle at 78% 82%,rgba(168,107,255,.18),transparent 25%),radial-gradient(circle at 20% 85%,rgba(72,245,167,.16),transparent 26%),linear-gradient(135deg,#050816,#10163b 45%,#071c2b);}
+.dangerous-level-section:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;background:linear-gradient(115deg,transparent 0 42%,rgba(255,255,255,.12) 50%,transparent 58%);background-size:220% 100%;animation:dangerSweep 8s ease-in-out infinite;}
+.dangerous-level-section .danger-card{backdrop-filter:blur(12px);}
+.dangerous-level-section .danger-card:nth-child(odd){animation:dangerFloat 4s ease-in-out infinite;}
+.dangerous-level-section .danger-card:nth-child(even){animation:dangerFloat 4.8s ease-in-out infinite reverse;}
+@keyframes dangerSweep{0%,100%{background-position:220% 0}50%{background-position:-20% 0}}
+@keyframes dangerFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.rainbow-mode .dangerous-level-section,.rainbow-mode .games-section{animation:hueRainbow 4s linear infinite;}
+.rainbow-mode .game-card{box-shadow:0 0 28px rgba(255,77,141,.18),0 0 48px rgba(85,231,255,.12);}
+@keyframes hueRainbow{to{filter:hue-rotate(360deg)}}
+
+/* ===== SECRET ACHIEVEMENTS ===== */
+.secret-achievements{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:1100px;margin:18px auto 0}
+.secret-chip{position:relative;overflow:hidden}
+.secret-chip:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent,rgba(255,255,255,.08),transparent);transform:translateX(-120%);transition:.6s}
+.secret-chip:hover:after{transform:translateX(120%)}
+.secret-chip.unlocked{border-color:#48f5a7aa;box-shadow:0 0 25px rgba(72,245,167,.16);background:linear-gradient(135deg,#08251f,#09142b)}
+.secret-chip.unlocked b{color:#48f5a7}
+.classified-big-icon{font-size:4rem;filter:drop-shadow(0 0 18px rgba(85,231,255,.6));animation:classifiedPulse 1.4s ease-in-out infinite alternate}
+.classified-message{color:#b9c9df;max-width:600px;margin:0 auto 22px;font-size:1.05rem}
+@keyframes classifiedPulse{to{transform:scale(1.08) rotate(3deg)}}
+
+/* ===== NEW COLOURFUL GAMES ===== */
+.rainbow-card{background:linear-gradient(145deg,rgba(14,20,52,.96),rgba(20,8,40,.94));}
+.rainbow-card .game-icon{filter:drop-shadow(0 0 14px rgba(255,255,255,.35));}
+.color-command{margin:18px auto;padding:18px;text-align:center;font:900 clamp(20px,4vw,34px) Orbitron;letter-spacing:2px;border-radius:16px;background:linear-gradient(90deg,rgba(85,231,255,.14),rgba(255,77,141,.14),rgba(255,209,102,.14),rgba(72,245,167,.14));border:1px solid rgba(255,255,255,.15);animation:commandGlow 2s ease-in-out infinite alternate}
+.color-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:18px auto;max-width:720px}
+.color-pad{min-height:76px;border:2px solid var(--pad);background:color-mix(in srgb,var(--pad) 16%,#071020);color:#fff;border-radius:14px;font:800 12px Orbitron;cursor:pointer;box-shadow:0 0 18px color-mix(in srgb,var(--pad) 22%,transparent);transition:.15s}
+.color-pad:hover{transform:translateY(-4px) scale(1.02);background:color-mix(in srgb,var(--pad) 28%,#071020)}
+.color-pad:active{transform:scale(.95)}
+@keyframes commandGlow{to{box-shadow:0 0 30px rgba(255,77,141,.18),0 0 30px rgba(85,231,255,.14)}}
+.pixel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:520px;margin:18px auto}
+.pixel-tile{aspect-ratio:1;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:linear-gradient(145deg,#0a1830,#160b2e);color:#fff;font-size:2rem;cursor:pointer;transition:.2s;box-shadow:inset 0 0 20px rgba(85,231,255,.04)}
+.pixel-tile:hover{transform:translateY(-3px);border-color:#55e7ff88}.pixel-tile.flipped{background:linear-gradient(145deg,#173c54,#3a1745);border-color:#55e7ff}.pixel-tile.matched{background:linear-gradient(145deg,#103c2f,#173c54);border-color:#48f5a7;box-shadow:0 0 22px rgba(72,245,167,.22)}
+@media(max-width:800px){.secret-achievements{grid-template-columns:1fr 1fr}.color-grid{grid-template-columns:1fr 1fr}.color-pad{min-height:64px}.pixel-grid{max-width:360px}}
+@media(max-width:480px){.secret-achievements{grid-template-columns:1fr}.color-grid{grid-template-columns:1fr 1fr}.classified-big-icon{font-size:3rem}}
