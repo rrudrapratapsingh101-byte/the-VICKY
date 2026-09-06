@@ -1,11 +1,19 @@
-# Rudra Pratap Singh // Vicky — Future Tech Hub
+RUDRA CITY BUILD 34 — PLAYABLE EXPERIENCE PASS
 
-Static GitHub Pages version. Everything here works in the browser using HTML/CSS/JavaScript.
+Focus: playable loop, clearer citizens, interaction/dialogue, synthesized local sound feedback, exploration discoveries, map-first presentation, and low-friction controls.
 
-Included: futuristic UI, loading screen, mouse glow, AI-style local console, calculator, tech facts, typing challenge, converter, stopwatch, terminal, Easter egg, progress dashboard, projects, Bikkee Warrior section, responsive design and optional sound.
+Controls:
+WASD / arrows = move or drive
+Mouse drag = camera
+E = enter/exit/interact
+F = talk to nearby citizen
+G = punch
+K = kick
+H = block
+J = street challenge
+M = map
+Space = jump/brake
+Shift = sprint/nitro
+4 = save, 5 = load, 0 = new game, Esc = pause
 
-Note: GitHub Pages cannot execute a Python/Flask backend. If you later want genuine Python APIs, deploy the backend separately and connect the frontend to it. This version intentionally needs no server, so GitHub upload is easy.
-
-
-## Secret Lab
-The site includes a local-only three-step secret code system: VICKY1 → VICKY2 → VICKY3. Unlock progress is saved in the visitor's browser using localStorage.
+No external assets or network services are required.
