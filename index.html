@@ -1,41 +1,213 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>RUDRA CITY — BUILD 36.1 PHYSICS STABLE</title><link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050816">
+<meta name="google-site-verification" content="w1kp10XnHH0muiUmVq9l5V4P1uO6Yxin9YCA2D7QO1E">
+<title>RUDRA PRATAP SINGH // VICKY</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<canvas id="gameCanvas"></canvas>
-<div id="fatal"></div>
-<div id="vignette"></div>
-<div id="hud">
-  <div class="topbar"><div class="brand">RUDRA <span>CITY</span></div><div class="tag">OPEN WORLD • DAYLIGHT</div></div>
-  <div class="objective"><div class="objDot"></div><div><small>ACTIVE OBJECTIVE</small><strong id="mission">Explore the city</strong></div></div>
-  <div class="stats"><div><small>MODE</small><b id="mode">ON FOOT</b></div><div><small>SPEED</small><b><span id="speed">0</span> KM/H</b></div><div><small>TIME</small><b id="clock">12:00</b></div></div>
-</div>
-<div id="featurePanel">
- <div class="fpTitle">RUDRA CITY // SYSTEMS</div>
- <div class="fpGrid">
-  <span>WEATHER <b id="weather">CLEAR</b></span><span>CASH <b id="cash">$1250</b></span>
-  <span>NITRO <b id="nitro">100%</b></span><span>STAMINA <b id="stamina">100%</b></span>
-  <span>WANTED <b id="wanted">☆☆☆☆☆</b></span><span>CAMERA <b id="cameraMode">STANDARD</b></span>
+<div id="loader"><div class="loader-box"><div class="loader-logo">RPS</div><p>RUDRA SYSTEM INITIALIZING...</p><div class="bar"><i></i></div><small>VICKY // EXTREME MODE</small></div></div>
+<div class="cursor-glow"></div>
+<header>
+  <a class="brand" href="#home"><b>RPS</b><span>// VICKY</span></a>
+  <button class="menu" onclick="toggleMenu()">☰</button>
+  <nav id="nav" class="nav" aria-label="Main navigation"><a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#lab">TECH LAB</a><a href="#games">GAME ZONE</a><a href="#secret">SECRET</a><a href="#tutorials">TUTORIALS</a><a href="#projects">PROJECTS</a><a href="#creator">BIKKEE WARRIOR</a></nav>
+</header>
+
+<main>
+<div class="jarvis-notice" role="note">🤖 <b>ASK JARVIS ABOUT RUDRA • VICKY • BIKKEE WARRIOR</b><span>For questions about Rudra, Vicky, Bikkee Warrior, their projects, website, games, creator journey, or how to contact / request a meeting, ask JARVIS. He is the website assistant and will guide you with the information available here.</span></div>
+
+<section id="home" class="hero">
+  <div class="orb"></div>
+  <p class="eyebrow">SYSTEM ONLINE • BUILT BY RUDRA</p>
+  <h1>RUDRA <span>PRATAP</span><br>SINGH</h1>
+  <h2>VICKY — ENTER THE EXTREME</h2>
+  <p class="lead">Learning. Building. Experimenting. Turning ideas into real projects.</p>
+  <div class="actions"><a class="btn primary" href="#lab">ENTER TECH LAB</a><a class="btn" href="#projects">EXPLORE PROJECTS</a></div>
+  <p class="signature">— RUDRA PRATAP SINGH // aka VICKY</p>
+  <div class="scroll">SCROLL TO EXPLORE ↓</div>
+</section>
+
+<section id="about" class="section">
+ <p class="eyebrow">01 // THE CREATOR</p><h2>Built by <span>Rudra</span>.</h2>
+ <div class="cards">
+  <article class="card"><b class="num">01</b><h3>CODER</h3><p>Learning HTML, CSS, JavaScript and Python by building real projects.</p></article>
+  <article class="card"><b class="num">02</b><h3>CREATOR</h3><p>Building a creator identity around technology, experiments and facts.</p></article>
+  <article class="card"><b class="num">03</b><h3>BUILDER</h3><p>This website is part of my journey from beginner to developer.</p></article>
  </div>
-</div>
-<div id="pause"><div><strong>RUDRA CITY PAUSED</strong><small>Press ESC to resume</small></div></div>
-<div id="photo"><div>PHOTO MODE<br><small>Press P to return</small></div></div>
-<div id="minimap"><canvas id="mapCanvas" width="190" height="190"></canvas><div class="mapLabel">CITY MAP</div></div>
-<div id="prompt"></div><div id="toast"></div><div id="crosshair"></div>
-<div id="controls">↑/W FORWARD • ↓/S REVERSE • ←/A / →/D STEER • SHIFT SPRINT/NITRO • SPACE JUMP/BRAKE • E ENTER/EXIT • MOUSE LOOK • V CAMERA • R RESET • M MAP • T WEATHER • L LIGHTS • F HORN • C CROUCH • X BOOST • P PHOTO • 0 NEW GAME • ESC PAUSE</div>
-<div id="quickbar"><b>RUDRA CITY</b><span>1 CLOSE</span><span>2 STANDARD</span><span>3 WIDE</span><span>4 SAVE</span><span>5 LOAD</span><span>6 DAY</span><span>7 NIGHT</span></div>
-<div id="mobile">
- <div id="touchStick" class="touchStick"><div class="stickKnob"></div></div>
- <div class="touchActions">
-  <button class="action" data-k="e">E</button><button class="action" data-k=" ">JUMP</button>
-  <button class="action" data-k="shift">RUN</button><button class="action combat" data-k="g">PUNCH</button>
-  <button class="action combat" data-k="k">KICK</button><button class="action" data-k="h">BLOCK</button>
-  <button class="action" data-k="f">TALK</button><button class="action" data-k="m">MAP</button>
+</section>
+
+<section id="lab" class="section">
+ <p class="eyebrow">02 // RUDRA'S TECH LAB</p><h2>Interactive <span>systems</span>.</h2>
+ <div class="tools">
+  <article class="card tool"><h3>⚡ ADVANCED CALCULATOR</h3><input id="calc" class="wide" placeholder="e.g. (25+5)*2-10/2"><div class="calc-buttons"><button onclick="calc('7')">7</button><button onclick="calc('8')">8</button><button onclick="calc('9')">9</button><button onclick="calc('/')">÷</button><button onclick="calc('4')">4</button><button onclick="calc('5')">5</button><button onclick="calc('6')">6</button><button onclick="calc('*')">×</button><button onclick="calc('1')">1</button><button onclick="calc('2')">2</button><button onclick="calc('3')">3</button><button onclick="calc('-')">−</button><button onclick="calc('0')">0</button><button onclick="calc('.')">.</button><button onclick="calc('(')">(</button><button onclick="calc(')')">)</button><button onclick="clearCalc()">C</button><button onclick="backCalc()">⌫</button><button onclick="calculate()">=</button><button onclick="calc('+')">+</button></div><div id="calcOut" class="result">Ready.</div></article>
+  <article class="card tool"><h3>🧠 JARVIS AI CORE</h3><p>Meet JARVIS — the website's conversational assistant for questions, ideas, coding, study and everyday chat.</p><div class="ai-mini-status">🤖 ONLINE • 💬 READY • 🔊 VOICE</div><a class="btn primary" href="#ai">OPEN JARVIS →</a></article>
+  <article class="card tool"><h3>🧪 RANDOM TECH FACT</h3><p>Generate a new fact locally in your browser.</p><button class="btn primary" onclick="fact()">GENERATE FACT</button><div id="fact" class="result">Awaiting input...</div></article>
+  <article class="card tool"><h3>⌨️ TYPING CHALLENGE</h3><div id="phrase" class="phrase">RUDRA BUILDS THE FUTURE</div><input id="typing" class="wide" placeholder="Type the phrase..." oninput="typing()"><div id="typingOut" class="result">Ready?</div></article>
+  <article class="card tool"><h3>🔄 UNIT CONVERTER</h3><div class="row"><input id="unitVal" type="number" placeholder="Value"><select id="unitType"><option value="km">km → miles</option><option value="miles">miles → km</option><option value="c">°C → °F</option><option value="f">°F → °C</option></select></div><button class="btn primary" onclick="convert()">CONVERT</button><div id="unitOut" class="result">Result.</div></article>
+  <article class="card tool"><h3>⏱️ STOPWATCH</h3><div id="watch" class="timer">00:00.0</div><div class="row"><button class="btn primary" onclick="startWatch()">START</button><button class="btn" onclick="stopWatch()">STOP</button><button class="btn" onclick="resetWatch()">RESET</button></div></article>
  </div>
- <div class="touchHint">LEFT DRAG MOVE • RIGHT SIDE DRAG LOOK</div>
+</section>
+
+<section class="section terminal-section">
+ <p class="eyebrow">03 // RUDRA TERMINAL</p><h2>Command <span>center</span>.</h2>
+ <div class="terminal"><div class="term-top"><span>● ● ●</span><b>rudra@vicky:~</b></div><div id="termOut" class="term-out"><p>RUDRA TERMINAL v1.0</p><p>Type <b>help</b> to see commands.</p></div><div class="term-input"><span>›</span><input id="termIn" autocomplete="off" placeholder="type a command..." onkeydown="terminalKey(event)"></div></div>
+</section>
+
+<section id="secret" class="section secret-section">
+ <p class="eyebrow">09 // CLASSIFIED ACCESS</p><h2>VICKY <span>SECRET LAB</span>.</h2>
+ <p class="lead">Enter the classified access code to open a hidden page.</p>
+ <div class="secret-console card">
+  <div class="secret-lock">🔐</div>
+  <div class="secret-copy"><h3>SECRET ACCESS TERMINAL</h3><p>Enter the classified access code.</p></div>
+  <div class="secret-input-row"><input id="secretCode" maxlength="15" autocomplete="off" spellcheck="false" placeholder="ENTER ACCESS CODE"><button class="btn primary" onclick="unlockSecret()">UNLOCK</button></div>
+  <div id="secretStatus" class="result">SYSTEM LOCKED</div>
+ </div>
+ <div id="ultimateSecret" class="ultimate-secret card" hidden></div>
+ <div id="classifiedPage" class="classified-page" hidden aria-hidden="true">
+  <button class="classified-exit" type="button" onclick="closeClassifiedPage()">EXIT ✕</button>
+  <div class="classified-inner">
+   <p class="eyebrow">CLASSIFIED // PRIVATE FILE</p>
+   <h3>THE CREW</h3>
+   <div class="classified-names">
+    <div>Daddu</div>
+    <div>Prempal Jijju</div>
+    <div>8 Kanjar</div>
+    <div>NK Yadav</div>
+    <div>Kaushl Didi</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+
+<section id="ai" class="section ai-section">
+ <p class="eyebrow">03.5 // JARVIS AI</p>
+ <h2>JARVIS AI. <span>Ask. Talk. Learn.</span></h2>
+ <p class="lead">Professional smart assistant for the RUDRA • VICKY website. JARVIS understands common questions, casual chat, Hinglish, unclear text and typo-heavy messages, then builds a natural reply with context and emojis.</p>
+ <div class="rudra-ai card">
+  <div class="ai-top"><div><div class="ai-badge">🤖 JARVIS AI • READY</div><h3>Talk with JARVIS</h3><p>Your professional website assistant. Ask normally — questions, casual messages, Hinglish, typos or random text are all welcome.</p></div><div class="ai-status"><span class="ai-dot"></span><span id="aiStatus">READY</span></div></div>
+  <div id="aiChat" class="ai-chat" aria-live="polite"></div>
+  <div class="ai-suggestions">
+   <button class="ai-chip" onclick="askRudraAI('What is HTML?')">What is HTML? 💻</button>
+   <button class="ai-chip" onclick="askRudraAI('How can I learn coding?')">How can I learn coding? 👨‍💻</button>
+   <button class="ai-chip" onclick="askRudraAI('What is photosynthesis?')">What is photosynthesis? 🌱</button>
+   <button class="ai-chip" onclick="askRudraAI('Give me a study tip')">Give me a study tip 📚</button>
+  </div>
+  <div class="ai-input-row">
+   <textarea id="aiInput" rows="1" placeholder="Type your question..." aria-label="Ask JARVIS" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();askRudraAI();}"></textarea>
+   <button class="btn" id="aiMicBtn" onclick="toggleRudraMic()">🎙️</button>
+   <button class="btn" onclick="clearRudraAI()">🗑️</button>
+   <button class="btn primary" onclick="askRudraAI()">SEND ➜</button>
+  </div>
+  <div class="ai-footer"><span>🤖 JARVIS ONLINE</span><span>💬 Smart conversation</span><span>🔊 Voice reply</span><button class="ai-voice" onclick="toggleRudraVoice()">VOICE: <b id="aiVoiceLabel">ON</b></button></div>
+ </div>
+</section>
+
+<section id="games" class="section games-section">
+ <p class="eyebrow">04 // RUDRA GAME ZONE</p><h2>19 games. <span>Play. Compete. Repeat.</span></h2>
+ <div class="featured-game card">
+  <div class="featured-badge">⭐ FEATURED • RUDRA CITY</div>
+  <div class="featured-content"><div><div class="game-icon">🏙️</div><h3>RUDRA CITY — OPEN WORLD</h3><p>Our main 3D game: explore the city, drive, talk to citizens, complete missions, collect rewards and use mobile controls.</p><div class="game-meta"><span>3D OPEN WORLD</span><span>MISSIONS</span><span>VEHICLES</span><span>MOBILE</span></div><button class="btn primary" onclick="openRudraCity()">PLAY RUDRA CITY →</button><a class="btn yt-help" href="https://www.youtube.com/@bikkeedada" target="_blank" rel="noopener">WATCH ON YT FOR EXPLANATION ↗</a></div><div class="featured-score"><b>MAIN GAME</b><span>BUILD 36.1</span><small>Best experienced on a modern phone or PC.</small></div></div>
+ </div>
+ <p class="lead">18 playable games + RUDRA CITY. Search, filter, random-play and chase local high scores.</p><div class="game-filters" role="group" aria-label="Game filters"><button class="filter-btn active" onclick="filterGames('all')">ALL</button><button class="filter-btn" onclick="filterGames('arcade')">ARCADE</button><button class="filter-btn" onclick="filterGames('puzzle')">PUZZLE</button><button class="filter-btn" onclick="filterGames('action')">ACTION</button></div>
+ <div class="game-center-tools card">
+  <div><b>🎮 GAME CENTER</b><span id="gameCountLive">18 GAMES</span></div>
+  <input id="gameSearch" class="game-search" type="search" placeholder="Search games..." oninput="searchGames(this.value)" aria-label="Search games">
+  <button class="btn" onclick="playRandomGame()">🎲 RANDOM PLAY</button>
+  <button class="btn" onclick="toggleGameSound()">🔊 SOUND: <span id="gameSoundLabel">OFF</span></button>
+ </div>
+ <div class="game-grid game-grid-2">
+  <article data-game-type="arcade" class="card game-card mega-game-card"><div class="game-icon">🏎️</div><h3>TRAFFIC RUSH</h3><p>Drive through a glowing highway, dodge traffic, survive longer and push your speed higher.</p><div class="game-meta"><span>DRIVE</span><span>DODGE</span><span>HIGH SCORE</span></div><button class="btn primary" onclick="openGame('car')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card"><div class="game-icon">🎯</div><h3>TARGET BLASTER</h3><p>Arcade target shooter with colourful enemies, combos, boss waves and a 60-second score chase.</p><div class="game-meta"><span>ARCADE</span><span>COMBO</span><span>BOSS WAVE</span></div><button class="btn primary" onclick="openGame('blaster')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card"><div class="game-icon">🍾</div><h3>BOTTLE BREAKER</h3><p>Face a row of colourful bottles and smash them with arcade shots before they disappear.</p><div class="game-meta"><span>BOTTLE RANGE</span><span>ACCURACY</span><span>HIGH SCORE</span></div><button class="btn primary" onclick="openGame('bottles')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card"><div class="game-icon">🍄</div><h3>VICKY SUPER RUN</h3><p>A classic side-scrolling platform adventure: run, jump, collect coins and reach the portal.</p><div class="game-meta"><span>PLATFORMER</span><span>COINS</span><span>LEVELS</span></div><button class="btn primary" onclick="openGame('platformer')">PLAY NOW →</button></article>
+  <article data-game-type="puzzle" class="card game-card mega-game-card"><div class="game-icon">🫧</div><h3>BUBBLE SHOOTER</h3><p>Match colourful bubbles, build combos and clear the board before the danger meter fills.</p><div class="game-meta"><span>MATCH 3</span><span>COMBOS</span><span>LEVELS</span></div><button class="btn primary" onclick="openGame('bubble')">PLAY NOW →</button></article>
+  <article data-game-type="puzzle" class="card game-card mega-game-card"><div class="game-icon">🌪️</div><h3>BUBBLE STORM</h3><p>A faster bubble-shooter challenge: pop colour clusters, beat the clock and survive the storm.</p><div class="game-meta"><span>TIME ATTACK</span><span>MATCH 3</span><span>COMBO RUSH</span></div><button class="btn primary" onclick="openGame('bubbleRush')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card"><div class="game-icon">🚀</div><h3>SPACE DODGE</h3><p>Fly through a colourful asteroid field, dodge hazards and survive as long as you can.</p><div class="game-meta"><span>SPACE</span><span>DODGE</span><span>HIGH SCORE</span></div><button class="btn primary" onclick="openGame('space')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card"><div class="game-icon">🏃</div><h3>ROOFTOP RUN</h3><p>Run across futuristic rooftops, jump gaps, collect coins and chase your best distance.</p><div class="game-meta"><span>RUN</span><span>JUMP</span><span>ENDLESS</span></div><button class="btn primary" onclick="openGame('rooftop')">PLAY NOW →</button></article>
+ </div>
+  <article data-game-type="arcade" class="card game-card mega-game-card new-game-card"><div class="game-icon">⚡</div><h3>REFLEX GRID</h3><p>Hit the glowing tile before it jumps to a new position. Speed gets faster every round.</p><div class="game-meta"><span>REFLEX</span><span>SPEED</span><span>COMBO</span></div><button class="btn primary" onclick="openGame('reflexGrid')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card new-game-card"><div class="game-icon">🛡️</div><h3>DODGE ARENA</h3><p>Move your shield through a storm of falling hazards and survive the countdown.</p><div class="game-meta"><span>DODGE</span><span>SURVIVE</span><span>30 SEC</span></div><button class="btn primary" onclick="openGame('dodgeArena')">PLAY NOW →</button></article>
+  <article data-game-type="arcade" class="card game-card mega-game-card new-game-card"><div class="game-icon">🪙</div><h3>COIN CATCHER</h3><p>Catch coins while avoiding bombs. Build a streak and protect your three lives.</p><div class="game-meta"><span>CATCH</span><span>STREAK</span><span>LIVES</span></div><button class="btn primary" onclick="openGame('coinCatcher')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card new-game-card"><div class="game-icon">🔫</div><h3>LASER DEFENSE</h3><p>Protect the base by clicking incoming targets before they cross the danger line.</p><div class="game-meta"><span>AIM</span><span>WAVES</span><span>DEFENSE</span></div><button class="btn primary" onclick="openGame('laserDefense')">PLAY NOW →</button></article>
+  <article data-game-type="puzzle" class="card game-card mega-game-card new-game-card"><div class="game-icon">🎨</div><h3>COLOR SORT</h3><p>Tap the color requested at the top. Wrong choices break your streak.</p><div class="game-meta"><span>COLOR</span><span>FOCUS</span><span>STREAK</span></div><button class="btn primary" onclick="openGame('colorSort')">PLAY NOW →</button></article>
+  <article data-game-type="puzzle" class="card game-card mega-game-card new-game-card"><div class="game-icon">🔢</div><h3>NUMBER RUSH</h3><p>Find the next number in order as the board shuffles faster and faster.</p><div class="game-meta"><span>NUMBERS</span><span>MEMORY</span><span>SPEED</span></div><button class="btn primary" onclick="openGame('numberRush')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card new-game-card"><div class="game-icon">🌀</div><h3>GRAVITY FLIP</h3><p>Switch gravity to keep the runner alive while the floor and ceiling alternate.</p><div class="game-meta"><span>GRAVITY</span><span>RUN</span><span>REACT</span></div><button class="btn primary" onclick="openGame('gravityFlip')">PLAY NOW →</button></article>
+  <article data-game-type="arcade" class="card game-card mega-game-card new-game-card"><div class="game-icon">🌉</div><h3>BRIDGE BUILDER</h3><p>Stop the moving bridge at the right length and cross each wider gap.</p><div class="game-meta"><span>TIMING</span><span>PRECISION</span><span>LEVELS</span></div><button class="btn primary" onclick="openGame('bridgeBuilder')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card new-game-card"><div class="game-icon">🪐</div><h3>ORBIT DEFENDER</h3><p>Rotate your defender around the planet and intercept incoming meteors.</p><div class="game-meta"><span>ORBIT</span><span>DEFEND</span><span>COMBO</span></div><button class="btn primary" onclick="openGame('orbitDefender')">PLAY NOW →</button></article>
+  <article data-game-type="puzzle" class="card game-card mega-game-card new-game-card"><div class="game-icon">🔤</div><h3>WORD SCRAMBLE</h3><p>Unscramble short tech words before the timer runs out. Type your answer and press Enter.</p><div class="game-meta"><span>WORDS</span><span>TYPE</span><span>30 SEC</span></div><button class="btn primary" onclick="openGame('wordScramble')">PLAY NOW →</button></article>
+ </div>
+ <div class="card game-scorebar"><span>🏆 BEST SCORES</span><b id="bestCar">DRIVE: 0</b><b id="bestBlaster">BLASTER: 0</b><b id="bestBottles">BOTTLES: 0</b><b id="bestPlatformer">RUN: 0</b><b id="bestBubble">BUBBLES: 0</b><b id="bestBubbleRush">STORM: 0</b><b id="bestSpace">SPACE: 0</b><b id="bestRooftop">ROOFTOP: 0</b><b id="bestNew_reflexGrid">REFLEX: 0</b><b id="bestNew_dodgeArena">DODGE: 0</b><b id="bestNew_coinCatcher">COINS: 0</b><b id="bestNew_laserDefense">LASER: 0</b><b id="bestNew_colorSort">COLOR: 0</b><b id="bestNew_numberRush">NUMBERS: 0</b><b id="bestNew_gravityFlip">GRAVITY: 0</b><b id="bestNew_bridgeBuilder">BRIDGE: 0</b><b id="bestNew_orbitDefender">ORBIT: 0</b><b id="bestNew_wordScramble">WORDS: 0</b></div>
+</section>
+
+<section id="tutorials" class="section tutorials">
+ <p class="eyebrow">05 // VICKY ACADEMY</p><h2>Learn. <span>Build.</span> Repeat.</h2>
+ <p class="lead">Quick tutorials and the creator channel — connected in one place.</p>
+ <div class="cards">
+  <article class="card"><h3>🌐 WEB DEV</h3><p>HTML → CSS → JavaScript. Learn by building real mini-projects.</p><a class="btn" href="#progress">VIEW ROADMAP →</a></article>
+  <article class="card"><h3>🎬 CREATOR LAB</h3><p>Technology facts, experiments, shorts and project videos from Bikkee Warrior.</p><a class="btn" href="https://www.youtube.com/@bikkeedada" target="_blank" rel="noopener">WATCH CHANNEL →</a></article>
+  <article class="card"><h3>⚡ 1-MINUTE MISSIONS</h3><p>Open the Game Zone, play one quick round, beat your score and go again.</p><a class="btn" href="#games">ENTER GAME ZONE →</a></article>
+ </div>
+</section>
+
+<section id="projects" class="section">
+ <p class="eyebrow">06 // PROJECT ARCHIVE</p><h2>Ideas becoming <span>reality</span>.</h2>
+ <div class="cards">
+  <article class="card project"><h3>🌐 FUTURE TECH HUB</h3><p>This website — a personal interactive tech lab.</p><label>LIVE PROJECT</label></article>
+  <article class="card project"><h3>🤖 ASKORA AI</h3><p>AI-style assistant project concept.</p><label>IN PROGRESS</label></article>
+  <article class="card project"><h3>🔐 CALCULATOR VAULT</h3><p>Future Flutter app concept with a calculator-style interface.</p><label>FUTURE PROJECT</label></article>
+ </div>
+</section>
+
+<section id="progress" class="section dangerous-level-section">
+ <p class="eyebrow">07 // DANGEROUS LEVEL</p><h2>DANGEROUS <span>LEVEL</span>.</h2><p class="danger-subtitle">🌈 ⚡ CODE HARD. BUILD LOUD. LEVEL UP. ⚡ 🌈</p><div class="danger-badge-row"><span>🟣 POWER MODE</span><span>🔵 CREATOR MODE</span><span>🟢 BUILD MODE</span><span>🟠 GAME MODE</span></div>
+ <div class="progress-grid dangerous-grid">
+  <div class="card danger-card"><h3>HTML</h3><div class="progress"><i style="width:85%"></i></div><b>COMPLETED / PRACTICED</b></div>
+  <div class="card danger-card"><h3>CSS</h3><div class="progress"><i style="width:45%"></i></div><b>LEARNING</b></div>
+  <div class="card danger-card"><h3>JAVASCRIPT</h3><div class="progress"><i style="width:20%"></i></div><b>LEARNING</b></div>
+  <div class="card danger-card"><h3>PYTHON</h3><div class="progress"><i style="width:15%"></i></div><b>FUTURE / LEARNING</b></div>
+ </div>
+ <div class="milestones card"><h3>🏆 MILESTONES</h3><span>✓ HTML learning completed</span><span>✓ CSS journey started</span><span>✓ First personal website</span><span>✓ Interactive tools built</span><span>✓ Future developer mode: ON</span></div>
+</section>
+
+<section id="creator" class="creator section">
+ <p class="eyebrow">08 // CREATOR MODE</p><h2><span>BIKKEE WARRIOR</span></h2>
+ <p class="lead">Rudra's creator identity for technology, experiments, facts and future content.</p>
+ <div class="creator-box"><div class="creator-mark">BW</div><div><h3>BIKKEE WARRIOR</h3><p>Creator • Builder • Learner</p><a class="btn" href="https://www.youtube.com/@bikkeedada" target="_blank" rel="noopener">OPEN CHANNEL</a></div></div>
+</section>
+
+<section class="final section"><p class="eyebrow">SYSTEM MESSAGE</p><h2>LEARN. BUILD. <span>LEVEL UP.</span> 🚀</h2><p>"This website is not the final version. It is proof that I started."</p><strong>— Rudra Pratap Singh // Vicky</strong></section>
+</main>
+
+<div class="sound"><span id="soundLabel">SOUND: OFF</span><button onclick="toggleSound()">ON / OFF</button></div>
+<div id="toast"></div>
+<template id="rudraCityTemplate"><div id="rudraCityHost" class="rudra-city-host"><canvas id="gameCanvas"></canvas><div id="fatal"></div><div id="vignette"></div><div id="hud">
+<div class="topbar"><div class="brand">RUDRA <span>CITY</span></div><div class="tag">OPEN WORLD • DAYLIGHT</div></div>
+<div class="objective"><div class="objDot"></div><div><small>ACTIVE OBJECTIVE</small><strong id="mission">Explore the city</strong></div></div>
+<div class="stats"><div><small>MODE</small><b id="mode">ON FOOT</b></div><div><small>SPEED</small><b><span id="speed">0</span> KM/H</b></div><div><small>TIME</small><b id="clock">12:00</b></div></div>
+</div><div id="featurePanel">
+<div class="fpTitle">RUDRA CITY // SYSTEMS</div>
+<div class="fpGrid">
+<span>WEATHER <b id="weather">CLEAR</b></span><span>CASH <b id="cash">$1250</b></span>
+<span>NITRO <b id="nitro">100%</b></span><span>STAMINA <b id="stamina">100%</b></span>
+<span>WANTED <b id="wanted">☆☆☆☆☆</b></span><span>CAMERA <b id="cameraMode">STANDARD</b></span>
 </div>
-<script src="game.js"></script>
-</body></html>
+</div><div id="pause"><div><strong>RUDRA CITY PAUSED</strong><small>Press ESC to resume</small></div></div><div id="photo"><div>PHOTO MODE<br/><small>Press P to return</small></div></div><div id="minimap"><canvas height="190" id="mapCanvas" width="190"></canvas><div class="mapLabel">CITY MAP</div></div><div id="prompt"></div><div id="cityToast"></div><div id="crosshair"></div><div id="controls">↑/W FORWARD • ↓/S REVERSE • ←/A / →/D STEER • SHIFT SPRINT/NITRO • SPACE JUMP/BRAKE • E ENTER/EXIT • MOUSE LOOK • V CAMERA • R RESET • M MAP • T WEATHER • L LIGHTS • F HORN • C CROUCH • X BOOST • P PHOTO • 0 NEW GAME • ESC PAUSE</div><div id="quickbar"><b>RUDRA CITY</b><span>1 CLOSE</span><span>2 STANDARD</span><span>3 WIDE</span><span>4 SAVE</span><span>5 LOAD</span><span>6 DAY</span><span>7 NIGHT</span></div><div id="mobile">
+<div class="touchStick" id="touchStick"><div class="stickKnob"></div></div>
+<div class="touchActions">
+<button class="action" data-k="e">E</button><button class="action" data-k=" ">JUMP</button>
+<button class="action" data-k="shift">RUN</button><button class="action combat" data-k="g">PUNCH</button>
+<button class="action combat" data-k="k">KICK</button><button class="action" data-k="h">BLOCK</button>
+<button class="action" data-k="f">TALK</button><button class="action" data-k="m">MAP</button>
+</div>
+<div class="touchHint">LEFT DRAG MOVE • RIGHT SIDE DRAG LOOK</div>
+</div></div></template>
+<div id="gameModal" class="game-modal" aria-hidden="true"><div class="game-window"><button class="game-close" onclick="closeGame()">×</button><div id="gameMount"></div></div></div>
+<footer>© 2026 RUDRA PRATAP SINGH • VICKY • BIKKEE WARRIOR</footer>
+<script src="script.js"></script>
+</body>
+</html>
