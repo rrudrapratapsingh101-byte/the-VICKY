@@ -18,6 +18,8 @@
 </header>
 
 <main>
+<div class="jarvis-notice" role="note">🤖 <b>ASK JARVIS ABOUT RUDRA • VICKY • BIKKEE WARRIOR</b><span>For questions about Rudra, Vicky, Bikkee Warrior, their projects, website, games, creator journey, or how to contact / request a meeting, ask JARVIS. He is the website assistant and will guide you with the information available here.</span></div>
+
 <section id="home" class="hero">
   <div class="orb"></div>
   <p class="eyebrow">SYSTEM ONLINE • BUILT BY RUDRA</p>
@@ -42,7 +44,7 @@
  <p class="eyebrow">02 // RUDRA'S TECH LAB</p><h2>Interactive <span>systems</span>.</h2>
  <div class="tools">
   <article class="card tool"><h3>⚡ ADVANCED CALCULATOR</h3><input id="calc" class="wide" placeholder="e.g. (25+5)*2-10/2"><div class="calc-buttons"><button onclick="calc('7')">7</button><button onclick="calc('8')">8</button><button onclick="calc('9')">9</button><button onclick="calc('/')">÷</button><button onclick="calc('4')">4</button><button onclick="calc('5')">5</button><button onclick="calc('6')">6</button><button onclick="calc('*')">×</button><button onclick="calc('1')">1</button><button onclick="calc('2')">2</button><button onclick="calc('3')">3</button><button onclick="calc('-')">−</button><button onclick="calc('0')">0</button><button onclick="calc('.')">.</button><button onclick="calc('(')">(</button><button onclick="calc(')')">)</button><button onclick="clearCalc()">C</button><button onclick="backCalc()">⌫</button><button onclick="calculate()">=</button><button onclick="calc('+')">+</button></div><div id="calcOut" class="result">Ready.</div></article>
-  <article class="card tool"><h3>🧠 VICKY AI CORE</h3><div id="chat" class="chat"><p>VICKY AI: System ready. Try <b>/help</b>.</p></div><div class="row"><input id="aiInput" placeholder="Ask Vicky..." onkeydown="if(event.key==='Enter')askAI()"><button class="btn primary" onclick="askAI()">SEND</button></div></article>
+  <article class="card tool"><h3>🧠 JARVIS AI CORE</h3><p>Meet JARVIS — the website's conversational assistant for questions, ideas, coding, study and everyday chat.</p><div class="ai-mini-status">🤖 ONLINE • 💬 READY • 🔊 VOICE</div><a class="btn primary" href="#ai">OPEN JARVIS →</a></article>
   <article class="card tool"><h3>🧪 RANDOM TECH FACT</h3><p>Generate a new fact locally in your browser.</p><button class="btn primary" onclick="fact()">GENERATE FACT</button><div id="fact" class="result">Awaiting input...</div></article>
   <article class="card tool"><h3>⌨️ TYPING CHALLENGE</h3><div id="phrase" class="phrase">RUDRA BUILDS THE FUTURE</div><input id="typing" class="wide" placeholder="Type the phrase..." oninput="typing()"><div id="typingOut" class="result">Ready?</div></article>
   <article class="card tool"><h3>🔄 UNIT CONVERTER</h3><div class="row"><input id="unitVal" type="number" placeholder="Value"><select id="unitType"><option value="km">km → miles</option><option value="miles">miles → km</option><option value="c">°C → °F</option><option value="f">°F → °C</option></select></div><button class="btn primary" onclick="convert()">CONVERT</button><div id="unitOut" class="result">Result.</div></article>
@@ -61,16 +63,10 @@
  <div class="secret-console card">
   <div class="secret-lock">🔐</div>
   <div class="secret-copy"><h3>SECRET ACCESS TERMINAL</h3><p>Enter the classified access code.</p></div>
-  <div class="secret-input-row"><input id="secretCode" maxlength="20" autocomplete="off" spellcheck="false" placeholder="ENTER ACCESS CODE"><button class="btn primary" onclick="unlockSecret()">UNLOCK</button></div>
+  <div class="secret-input-row"><input id="secretCode" maxlength="15" autocomplete="off" spellcheck="false" placeholder="ENTER ACCESS CODE"><button class="btn primary" onclick="unlockSecret()">UNLOCK</button></div>
   <div id="secretStatus" class="result">SYSTEM LOCKED</div>
  </div>
- <div id="secretAchievements" class="secret-achievements">
-  <div class="secret-chip" data-ach="code"><span>ACHIEVEMENT 01</span><b>CODE BREAKER</b><small>LOCKED</small></div>
-  <div class="secret-chip" data-ach="rainbow"><span>ACHIEVEMENT 02</span><b>RAINBOW MODE</b><small>LOCKED</small></div>
-  <div class="secret-chip" data-ach="easter"><span>ACHIEVEMENT 03</span><b>EASTER EYE</b><small>LOCKED</small></div>
-  <div class="secret-chip" data-ach="crew"><span>ACHIEVEMENT 04</span><b>CLASSIFIED CREW</b><small>LOCKED</small></div>
-</div>
-<div id="ultimateSecret" class="ultimate-secret card" hidden></div>
+ <div id="ultimateSecret" class="ultimate-secret card" hidden></div>
  <div id="classifiedPage" class="classified-page" hidden aria-hidden="true">
   <button class="classified-exit" type="button" onclick="closeClassifiedPage()">EXIT ✕</button>
   <div class="classified-inner">
@@ -87,9 +83,43 @@
  </div>
 </section>
 
+
+<section id="ai" class="section ai-section">
+ <p class="eyebrow">03.5 // JARVIS AI</p>
+ <h2>JARVIS AI. <span>Ask. Talk. Learn.</span></h2>
+ <p class="lead">Professional smart assistant for the RUDRA • VICKY website. JARVIS understands common questions, casual chat, Hinglish, unclear text and typo-heavy messages, then builds a natural reply with context and emojis.</p>
+ <div class="rudra-ai card">
+  <div class="ai-top"><div><div class="ai-badge">🤖 JARVIS AI • READY</div><h3>Talk with JARVIS</h3><p>Your professional website assistant. Ask normally — questions, casual messages, Hinglish, typos or random text are all welcome.</p></div><div class="ai-status"><span class="ai-dot"></span><span id="aiStatus">READY</span></div></div>
+  <div id="aiChat" class="ai-chat" aria-live="polite"></div>
+  <div class="ai-suggestions">
+   <button class="ai-chip" onclick="askRudraAI('What is HTML?')">What is HTML? 💻</button>
+   <button class="ai-chip" onclick="askRudraAI('How can I learn coding?')">How can I learn coding? 👨‍💻</button>
+   <button class="ai-chip" onclick="askRudraAI('What is photosynthesis?')">What is photosynthesis? 🌱</button>
+   <button class="ai-chip" onclick="askRudraAI('Give me a study tip')">Give me a study tip 📚</button>
+  </div>
+  <div class="ai-input-row">
+   <textarea id="aiInput" rows="1" placeholder="Type your question..." aria-label="Ask JARVIS" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();askRudraAI();}"></textarea>
+   <button class="btn" id="aiMicBtn" onclick="toggleRudraMic()">🎙️</button>
+   <button class="btn" onclick="clearRudraAI()">🗑️</button>
+   <button class="btn primary" onclick="askRudraAI()">SEND ➜</button>
+  </div>
+  <div class="ai-footer"><span>🤖 JARVIS ONLINE</span><span>💬 Smart conversation</span><span>🔊 Voice reply</span><button class="ai-voice" onclick="toggleRudraVoice()">VOICE: <b id="aiVoiceLabel">ON</b></button></div>
+ </div>
+</section>
+
 <section id="games" class="section games-section">
- <p class="eyebrow">04 // RUDRA GAME ZONE</p><h2>Nine games. <span>Maximum chaos.</span></h2>
- <p class="lead">Mobile-first arcade games with responsive controls, high scores, combos and secret unlocks.</p><div class="game-filters" role="group" aria-label="Game filters"><button class="filter-btn active" onclick="filterGames('all')">ALL</button><button class="filter-btn" onclick="filterGames('arcade')">ARCADE</button><button class="filter-btn" onclick="filterGames('puzzle')">PUZZLE</button><button class="filter-btn" onclick="filterGames('action')">ACTION</button></div>
+ <p class="eyebrow">04 // RUDRA GAME ZONE</p><h2>19 games. <span>Play. Compete. Repeat.</span></h2>
+ <div class="featured-game card">
+  <div class="featured-badge">⭐ FEATURED • RUDRA CITY</div>
+  <div class="featured-content"><div><div class="game-icon">🏙️</div><h3>RUDRA CITY — OPEN WORLD</h3><p>Our main 3D game: explore the city, drive, talk to citizens, complete missions, collect rewards and use mobile controls.</p><div class="game-meta"><span>3D OPEN WORLD</span><span>MISSIONS</span><span>VEHICLES</span><span>MOBILE</span></div><button class="btn primary" onclick="openRudraCity()">PLAY RUDRA CITY →</button><a class="btn yt-help" href="https://www.youtube.com/@bikkeedada" target="_blank" rel="noopener">WATCH ON YT FOR EXPLANATION ↗</a></div><div class="featured-score"><b>MAIN GAME</b><span>BUILD 36.1</span><small>Best experienced on a modern phone or PC.</small></div></div>
+ </div>
+ <p class="lead">18 playable games + RUDRA CITY. Search, filter, random-play and chase local high scores.</p><div class="game-filters" role="group" aria-label="Game filters"><button class="filter-btn active" onclick="filterGames('all')">ALL</button><button class="filter-btn" onclick="filterGames('arcade')">ARCADE</button><button class="filter-btn" onclick="filterGames('puzzle')">PUZZLE</button><button class="filter-btn" onclick="filterGames('action')">ACTION</button></div>
+ <div class="game-center-tools card">
+  <div><b>🎮 GAME CENTER</b><span id="gameCountLive">18 GAMES</span></div>
+  <input id="gameSearch" class="game-search" type="search" placeholder="Search games..." oninput="searchGames(this.value)" aria-label="Search games">
+  <button class="btn" onclick="playRandomGame()">🎲 RANDOM PLAY</button>
+  <button class="btn" onclick="toggleGameSound()">🔊 SOUND: <span id="gameSoundLabel">OFF</span></button>
+ </div>
  <div class="game-grid game-grid-2">
   <article data-game-type="arcade" class="card game-card mega-game-card"><div class="game-icon">🏎️</div><h3>TRAFFIC RUSH</h3><p>Drive through a glowing highway, dodge traffic, survive longer and push your speed higher.</p><div class="game-meta"><span>DRIVE</span><span>DODGE</span><span>HIGH SCORE</span></div><button class="btn primary" onclick="openGame('car')">PLAY NOW →</button></article>
   <article data-game-type="action" class="card game-card mega-game-card"><div class="game-icon">🎯</div><h3>TARGET BLASTER</h3><p>Arcade target shooter with colourful enemies, combos, boss waves and a 60-second score chase.</p><div class="game-meta"><span>ARCADE</span><span>COMBO</span><span>BOSS WAVE</span></div><button class="btn primary" onclick="openGame('blaster')">PLAY NOW →</button></article>
@@ -99,11 +129,19 @@
   <article data-game-type="puzzle" class="card game-card mega-game-card"><div class="game-icon">🌪️</div><h3>BUBBLE STORM</h3><p>A faster bubble-shooter challenge: pop colour clusters, beat the clock and survive the storm.</p><div class="game-meta"><span>TIME ATTACK</span><span>MATCH 3</span><span>COMBO RUSH</span></div><button class="btn primary" onclick="openGame('bubbleRush')">PLAY NOW →</button></article>
   <article data-game-type="action" class="card game-card mega-game-card"><div class="game-icon">🚀</div><h3>SPACE DODGE</h3><p>Fly through a colourful asteroid field, dodge hazards and survive as long as you can.</p><div class="game-meta"><span>SPACE</span><span>DODGE</span><span>HIGH SCORE</span></div><button class="btn primary" onclick="openGame('space')">PLAY NOW →</button></article>
   <article data-game-type="action" class="card game-card mega-game-card"><div class="game-icon">🏃</div><h3>ROOFTOP RUN</h3><p>Run across futuristic rooftops, jump gaps, collect coins and chase your best distance.</p><div class="game-meta"><span>RUN</span><span>JUMP</span><span>ENDLESS</span></div><button class="btn primary" onclick="openGame('rooftop')">PLAY NOW →</button></article>
-  <article data-game-type="arcade" class="card game-card mega-game-card rainbow-card"><div class="game-icon">🌈</div><h3>COLOR CATCH</h3><p>Catch the target only when its colour matches the command. Speed rises every round.</p><div class="game-meta"><span>REACTION</span><span>COLOUR</span><span>COMBO</span></div><button class="btn primary" onclick="openGame('colorCatch')">PLAY NOW →</button></article>
-  <article data-game-type="action" class="card game-card mega-game-card rainbow-card"><div class="game-icon">⚡</div><h3>LASER LANE</h3><p>Switch lanes and dodge incoming laser gates. Survive the colourful speed-up.</p><div class="game-meta"><span>DODGE</span><span>LANES</span><span>SPEED</span></div><button class="btn primary" onclick="openGame('laserLane')">PLAY NOW →</button></article>
-  <article data-game-type="puzzle" class="card game-card mega-game-card rainbow-card"><div class="game-icon">🧩</div><h3>PIXEL FLIP</h3><p>Flip tiles and find matching pairs before the move counter reaches zero.</p><div class="game-meta"><span>MEMORY</span><span>PUZZLE</span><span>PAIRS</span></div><button class="btn primary" onclick="openGame('pixelFlip')">PLAY NOW →</button></article>
  </div>
- <div class="card game-scorebar"><span>🏆 BEST SCORES</span><b id="bestCar">DRIVE: 0</b><b id="bestBlaster">BLASTER: 0</b><b id="bestBottles">BOTTLES: 0</b><b id="bestPlatformer">RUN: 0</b><b id="bestBubble">BUBBLES: 0</b><b id="bestBubbleRush">STORM: 0</b></div>
+  <article data-game-type="arcade" class="card game-card mega-game-card new-game-card"><div class="game-icon">⚡</div><h3>REFLEX GRID</h3><p>Hit the glowing tile before it jumps to a new position. Speed gets faster every round.</p><div class="game-meta"><span>REFLEX</span><span>SPEED</span><span>COMBO</span></div><button class="btn primary" onclick="openGame('reflexGrid')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card new-game-card"><div class="game-icon">🛡️</div><h3>DODGE ARENA</h3><p>Move your shield through a storm of falling hazards and survive the countdown.</p><div class="game-meta"><span>DODGE</span><span>SURVIVE</span><span>30 SEC</span></div><button class="btn primary" onclick="openGame('dodgeArena')">PLAY NOW →</button></article>
+  <article data-game-type="arcade" class="card game-card mega-game-card new-game-card"><div class="game-icon">🪙</div><h3>COIN CATCHER</h3><p>Catch coins while avoiding bombs. Build a streak and protect your three lives.</p><div class="game-meta"><span>CATCH</span><span>STREAK</span><span>LIVES</span></div><button class="btn primary" onclick="openGame('coinCatcher')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card new-game-card"><div class="game-icon">🔫</div><h3>LASER DEFENSE</h3><p>Protect the base by clicking incoming targets before they cross the danger line.</p><div class="game-meta"><span>AIM</span><span>WAVES</span><span>DEFENSE</span></div><button class="btn primary" onclick="openGame('laserDefense')">PLAY NOW →</button></article>
+  <article data-game-type="puzzle" class="card game-card mega-game-card new-game-card"><div class="game-icon">🎨</div><h3>COLOR SORT</h3><p>Tap the color requested at the top. Wrong choices break your streak.</p><div class="game-meta"><span>COLOR</span><span>FOCUS</span><span>STREAK</span></div><button class="btn primary" onclick="openGame('colorSort')">PLAY NOW →</button></article>
+  <article data-game-type="puzzle" class="card game-card mega-game-card new-game-card"><div class="game-icon">🔢</div><h3>NUMBER RUSH</h3><p>Find the next number in order as the board shuffles faster and faster.</p><div class="game-meta"><span>NUMBERS</span><span>MEMORY</span><span>SPEED</span></div><button class="btn primary" onclick="openGame('numberRush')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card new-game-card"><div class="game-icon">🌀</div><h3>GRAVITY FLIP</h3><p>Switch gravity to keep the runner alive while the floor and ceiling alternate.</p><div class="game-meta"><span>GRAVITY</span><span>RUN</span><span>REACT</span></div><button class="btn primary" onclick="openGame('gravityFlip')">PLAY NOW →</button></article>
+  <article data-game-type="arcade" class="card game-card mega-game-card new-game-card"><div class="game-icon">🌉</div><h3>BRIDGE BUILDER</h3><p>Stop the moving bridge at the right length and cross each wider gap.</p><div class="game-meta"><span>TIMING</span><span>PRECISION</span><span>LEVELS</span></div><button class="btn primary" onclick="openGame('bridgeBuilder')">PLAY NOW →</button></article>
+  <article data-game-type="action" class="card game-card mega-game-card new-game-card"><div class="game-icon">🪐</div><h3>ORBIT DEFENDER</h3><p>Rotate your defender around the planet and intercept incoming meteors.</p><div class="game-meta"><span>ORBIT</span><span>DEFEND</span><span>COMBO</span></div><button class="btn primary" onclick="openGame('orbitDefender')">PLAY NOW →</button></article>
+  <article data-game-type="puzzle" class="card game-card mega-game-card new-game-card"><div class="game-icon">🔤</div><h3>WORD SCRAMBLE</h3><p>Unscramble short tech words before the timer runs out. Type your answer and press Enter.</p><div class="game-meta"><span>WORDS</span><span>TYPE</span><span>30 SEC</span></div><button class="btn primary" onclick="openGame('wordScramble')">PLAY NOW →</button></article>
+ </div>
+ <div class="card game-scorebar"><span>🏆 BEST SCORES</span><b id="bestCar">DRIVE: 0</b><b id="bestBlaster">BLASTER: 0</b><b id="bestBottles">BOTTLES: 0</b><b id="bestPlatformer">RUN: 0</b><b id="bestBubble">BUBBLES: 0</b><b id="bestBubbleRush">STORM: 0</b><b id="bestSpace">SPACE: 0</b><b id="bestRooftop">ROOFTOP: 0</b><b id="bestNew_reflexGrid">REFLEX: 0</b><b id="bestNew_dodgeArena">DODGE: 0</b><b id="bestNew_coinCatcher">COINS: 0</b><b id="bestNew_laserDefense">LASER: 0</b><b id="bestNew_colorSort">COLOR: 0</b><b id="bestNew_numberRush">NUMBERS: 0</b><b id="bestNew_gravityFlip">GRAVITY: 0</b><b id="bestNew_bridgeBuilder">BRIDGE: 0</b><b id="bestNew_orbitDefender">ORBIT: 0</b><b id="bestNew_wordScramble">WORDS: 0</b></div>
 </section>
 
 <section id="tutorials" class="section tutorials">
@@ -126,7 +164,7 @@
 </section>
 
 <section id="progress" class="section dangerous-level-section">
- <p class="eyebrow">07 // DANGEROUS LEVEL</p><h2>DANGEROUS <span>LEVEL</span>.</h2><p class="danger-subtitle">⚡ CODE HARD. BUILD LOUD. LEVEL UP. ⚡</p>
+ <p class="eyebrow">07 // DANGEROUS LEVEL</p><h2>DANGEROUS <span>LEVEL</span>.</h2><p class="danger-subtitle">🌈 ⚡ CODE HARD. BUILD LOUD. LEVEL UP. ⚡ 🌈</p><div class="danger-badge-row"><span>🟣 POWER MODE</span><span>🔵 CREATOR MODE</span><span>🟢 BUILD MODE</span><span>🟠 GAME MODE</span></div>
  <div class="progress-grid dangerous-grid">
   <div class="card danger-card"><h3>HTML</h3><div class="progress"><i style="width:85%"></i></div><b>COMPLETED / PRACTICED</b></div>
   <div class="card danger-card"><h3>CSS</h3><div class="progress"><i style="width:45%"></i></div><b>LEARNING</b></div>
